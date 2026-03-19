@@ -3,25 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fcf9f8;
+  --foreground: #1a1a2e;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Geist Sans', system-ui, sans-serif;
+  background-color: #fcf9f8;
+  color: #1a1a2e;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .radial-bloom {
+    background: radial-gradient(
+      circle at 50% 40%,
+      rgba(124, 58, 237, 0.07) 0%,
+      rgba(252, 249, 248, 0) 70%
+    );
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .ambient-shadow {
+    box-shadow: 0 20px 50px -12px rgba(26, 26, 46, 0.08);
+  }
+
+  .font-headline {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
   }
 }
