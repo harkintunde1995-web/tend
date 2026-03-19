@@ -102,26 +102,26 @@ export function StepCategorise({ contacts, assignments, onChange, onNext }: Prop
       <div className="mb-6 text-center">
         <h2 className="text-2xl font-bold text-gray-900">Categorise your contacts</h2>
         <p className="mt-2 text-gray-500">
-          Assign each person to a tier — this sets how often you&apos;ll be reminded to reach out.
+          Assign each person to a tier. You&apos;ll set your own schedule on the next step.
         </p>
       </div>
 
-      {/* Tier frequency key */}
+      {/* Tier key — labels only, no preset frequencies */}
       <div className="mb-6 grid grid-cols-3 gap-3 text-center text-xs">
         <div className="rounded-xl border border-rose-100 bg-rose-50 p-3">
           <Heart size={16} className="mx-auto mb-1 text-rose-500" />
           <p className="font-semibold text-rose-700">Family</p>
-          <p className="text-rose-500">Every 2–3 days</p>
+          <p className="text-rose-400">Your closest people</p>
         </div>
         <div className="rounded-xl border border-violet-100 bg-violet-50 p-3">
           <Star size={16} className="mx-auto mb-1 text-violet-500" />
           <p className="font-semibold text-violet-700">Close Friends</p>
-          <p className="text-violet-500">Every 2 weeks</p>
+          <p className="text-violet-400">Important relationships</p>
         </div>
         <div className="rounded-xl border border-sky-100 bg-sky-50 p-3">
           <Users size={16} className="mx-auto mb-1 text-sky-500" />
           <p className="font-semibold text-sky-700">Everyone Else</p>
-          <p className="text-sky-500">Rotating monthly</p>
+          <p className="text-sky-400">Worth staying in touch</p>
         </div>
       </div>
 
@@ -194,13 +194,15 @@ export function StepCategorise({ contacts, assignments, onChange, onNext }: Prop
               return (
                 <div
                   key={contact.id}
-                  className="flex items-center gap-3 px-4 py-2.5"
+                  className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 px-4 py-3"
                 >
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xs font-semibold text-gray-500">
-                    {contact.name[0]?.toUpperCase() ?? '?'}
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xs font-semibold text-gray-500">
+                      {contact.name[0]?.toUpperCase() ?? '?'}
+                    </div>
+                    <span className="min-w-0 flex-1 truncate text-sm font-medium text-gray-800">{contact.name}</span>
                   </div>
-                  <span className="min-w-0 flex-1 truncate text-sm text-gray-800">{contact.name}</span>
-                  <div className="flex shrink-0 gap-1">
+                  <div className="flex shrink-0 gap-1 pl-11 sm:pl-0">
                     {TIERS.map((tier) => (
                       <button
                         key={tier.id}

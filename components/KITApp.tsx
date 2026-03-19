@@ -345,7 +345,7 @@ export function KITApp() {
             <span className="font-[family-name:var(--font-bricolage)] font-extrabold tracking-tight">Tend</span>
           </h1>
           <a
-            href="https://github.com"
+            href="https://github.com/harkintunde1995-web/tend"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-primary-container border-b border-primary-container/40 hover:border-primary-container transition-colors pb-0.5"
@@ -459,8 +459,8 @@ export function KITApp() {
             Open source. No data stored. Made with care.
           </p>
           <div className="flex gap-6 text-sm text-on-surface-variant">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-on-secondary-fixed transition-colors">GitHub</a>
-            <a href="#" className="hover:text-on-secondary-fixed transition-colors">Privacy</a>
+            <a href="https://github.com/harkintunde1995-web/tend" target="_blank" rel="noopener noreferrer" className="hover:text-on-secondary-fixed transition-colors">GitHub</a>
+            <a href="/privacy" className="hover:text-on-secondary-fixed transition-colors">Privacy</a>
           </div>
         </div>
       </footer>

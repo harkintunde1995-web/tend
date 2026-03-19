@@ -301,7 +301,7 @@ export function generateICS(
   return {
     content,
     eventCount: allEvents.length,
-    fileName: 'keep-in-touch.ics',
+    fileName: 'tend.ics',
     cycleWeeks,
   };
 }

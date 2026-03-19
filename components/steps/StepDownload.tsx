@@ -80,7 +80,7 @@ export function StepDownload({ contacts, assignments, schedules, onReset, onBack
         ) : (
           <>
             <Download size={20} className="transition-transform group-hover:-translate-y-0.5" />
-            Download keep-in-touch.ics
+            Download tend.ics
           </>
         )}
       </button>
