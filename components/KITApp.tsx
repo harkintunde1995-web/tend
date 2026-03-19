@@ -292,9 +292,9 @@ export function KITApp() {
       <header className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
           <div>
-            <h1 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+            <h1 className="text-lg text-gray-900 flex items-center gap-2">
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-violet-600"><HugIcon small /></span>
-              Tend
+              <span className="font-[family-name:var(--font-bricolage)] font-extrabold tracking-tight">Tend</span>
             </h1>
             <p className="text-xs text-gray-400">Staying in touch is not hard. Remembering to is.</p>
           </div>
@@ -317,10 +317,10 @@ export function KITApp() {
               <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-600 shadow-lg shadow-violet-200">
                 <HugIcon />
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+              <h1 className="text-4xl tracking-tight text-gray-900 sm:text-5xl font-[family-name:var(--font-bricolage)] font-extrabold">
                 Staying in touch<br />is not hard.
               </h1>
-              <p className="mt-3 text-xl font-medium text-violet-600">Remembering to is.</p>
+              <p className="mt-3 text-xl font-medium text-violet-600 font-[family-name:var(--font-bricolage)]">Remembering to is.</p>
               <p className="mx-auto mt-5 max-w-md text-gray-500">
                 Upload your contacts. Tell us who matters most. Get a calendar that reminds you to reach out, so you never lose someone to the busyness of life.
               </p>
