@@ -338,11 +338,17 @@ export function KITApp() {
       {/* Header */}
       <header className="fixed top-0 w-full z-50 glass-panel border-b" style={{ borderColor: 'rgba(204,195,216,0.2)' }}>
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <h1 className="text-xl text-on-secondary-fixed flex items-center gap-3">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary-container">
-              <HugIcon small />
-            </span>
-            <span className="font-[family-name:var(--font-bricolage)] font-extrabold tracking-tight">Tend</span>
+          <h1 className="text-xl text-on-secondary-fixed">
+            <button
+              onClick={() => { setStep('upload'); setContacts([]); setAssignments({}); setSchedules(DEFAULT_SCHEDULES); }}
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+              aria-label="Tend — return to home"
+            >
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary-container">
+                <HugIcon small />
+              </span>
+              <span className="font-[family-name:var(--font-bricolage)] font-extrabold tracking-tight">Tend</span>
+            </button>
           </h1>
           <a
             href="https://github.com/harkintunde1995-web/tend"
