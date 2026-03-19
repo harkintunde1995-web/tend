@@ -288,7 +288,7 @@ export function generateICS(
     'PRODID:-//Keep In Touch//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    'X-WR-CALNAME:Keep In Touch',
+    'X-WR-CALNAME:Tend',
     'X-WR-CALDESC:Scheduled reach-outs — Family | Close Friends | Everyone Else',
   ].join('\r\n') + '\r\n';
 

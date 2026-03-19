@@ -25,6 +25,8 @@ export function StepDownload({ contacts, assignments, schedules, onReset, onBack
     if (!result) return;
     downloadICS(result);
     setDownloaded(true);
+    // Increment public counter (fire and forget)
+    fetch('/api/stats', { method: 'POST' }).catch(() => {});
   };
 
   const familyCount = contacts.filter((c) => assignments[c.id] === 'family').length;

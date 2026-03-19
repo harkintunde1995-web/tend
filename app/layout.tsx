@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Keep In Touch — Never lose a relationship again",
-  description: "Upload your contacts, set how often you want to reach out, and download a personalised outreach calendar for Apple, Google, or Outlook. Free, open source, private.",
+  title: "Tend. Staying in touch is not hard. Remembering to is.",
+  description: "Upload your contacts, tell us who matters most, and get a calendar that reminds you to reach out. Free, private, no account needed. Works with Apple, Google, and Outlook.",
 };
 
 export default function RootLayout({
