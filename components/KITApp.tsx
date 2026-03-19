@@ -110,11 +110,11 @@ function HowToExport() {
       icon: '📱',
       name: 'iPhone',
       steps: [
-        'On any browser, go to icloud.com and sign in',
-        'Open Contacts',
-        'Press Cmd+A on Mac or Ctrl+A on Windows to select all contacts',
-        'Click the gear icon at the bottom left and choose Export vCard',
-        'Upload that file here',
+        'Download the free app "My Contacts Backup" from the App Store',
+        'Open it and tap Backup',
+        'Tap the share icon on the .vcf file it creates',
+        'Save it to your Files app',
+        'Come back here and upload that file',
       ],
     },
     {
