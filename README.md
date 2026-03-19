@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tend
 
-## Getting Started
+**Remember the people who matter.**
 
-First, run the development server:
+Tend helps you stay in touch with the people you care about — not by adding another app to your life, but by putting reminders where you already live: your calendar.
+
+Live at **[usetend.vercel.app](https://usetend.vercel.app)**
+
+---
+
+## What it does
+
+1. **Export your contacts** from iPhone, Android, or Google Contacts as a `.vcf` file
+2. **Upload to Tend** — everything is parsed locally in your browser
+3. **Sort into tiers** — Family, Close Friends, Everyone Else
+4. **Download a `.ics` file** — import into Apple Calendar, Google Calendar, or Outlook
+
+Your contacts never leave your device. Nothing is sent to a server.
+
+---
+
+## Why it's open source
+
+Tend processes your contact list — that's sensitive. Open sourcing it means anyone can verify that the privacy promise is real. No tracking, no data collection, no accounts.
+
+---
+
+## Tech stack
+
+- [Next.js 14](https://nextjs.org) (App Router)
+- [Tailwind CSS](https://tailwindcss.com) with a custom Material Design 3 token system
+- [TypeScript](https://www.typescriptlang.org)
+- All contact parsing runs client-side via a custom VCF parser
+- Calendar generation uses the iCalendar (`.ics`) spec
+
+---
+
+## Running locally
 
 ```bash
+git clone https://github.com/harkintunde1995-web/tend.git
+cd tend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+app/          → Next.js app router (layout, page, API routes)
+components/   → UI components
+  steps/      → StepUpload, StepCategorise, StepSchedule, StepDownload
+  ui/         → Shared UI (ProgressBar, etc.)
+lib/          → Core logic
+  vcf-parser  → Parses .vcf contact exports
+  ics-builder → Generates .ics calendar files
+  types       → Shared TypeScript types
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Pull requests are welcome. If you find a bug or have an idea, open an issue.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
