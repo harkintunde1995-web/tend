@@ -10,6 +10,32 @@ import { StepDownload } from './steps/StepDownload';
 const STORAGE_KEY = 'tend-assignments';
 const YT_VIDEO_ID = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_ID;
 
+function HugIcon({ small }: { small?: boolean }) {
+  const size = small ? 18 : 32;
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 40 40"
+      fill="none"
+      aria-hidden="true"
+    >
+      {/* Left person head */}
+      <circle cx="13" cy="9" r="4.5" fill="white" opacity="0.95" />
+      {/* Right person head */}
+      <circle cx="27" cy="9" r="4.5" fill="white" opacity="0.95" />
+      {/* Left body */}
+      <path d="M13 14 C13 14 10 20 11 28" stroke="white" strokeWidth="2.8" strokeLinecap="round" />
+      {/* Right body */}
+      <path d="M27 14 C27 14 30 20 29 28" stroke="white" strokeWidth="2.8" strokeLinecap="round" />
+      {/* Left arm reaching over right shoulder */}
+      <path d="M13 18 C17 15 24 15 29 19" stroke="white" strokeWidth="2.4" strokeLinecap="round" />
+      {/* Right arm reaching over left shoulder */}
+      <path d="M27 18 C23 15 16 15 11 19" stroke="white" strokeWidth="2.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function Counter() {
   const [count, setCount] = useState<number | null>(null);
 
@@ -84,10 +110,11 @@ function HowToExport() {
       icon: '📱',
       name: 'iPhone',
       steps: [
-        'Open the Contacts app',
-        'Tap a contact, then share it — or use a third-party app like "Export Contact" to export all at once',
-        'Save the .vcf file to your Files app',
-        'Upload it here',
+        'On any browser, go to icloud.com and sign in',
+        'Open Contacts',
+        'Press Cmd+A on Mac or Ctrl+A on Windows to select all contacts',
+        'Click the gear icon at the bottom left and choose Export vCard',
+        'Upload that file here',
       ],
     },
     {
@@ -265,7 +292,10 @@ export function KITApp() {
       <header className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4">
           <div>
-            <h1 className="text-lg font-bold text-gray-900">Tend</h1>
+            <h1 className="text-lg font-bold text-gray-900 flex items-center gap-2">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-violet-600"><HugIcon small /></span>
+              Tend
+            </h1>
             <p className="text-xs text-gray-400">Staying in touch is not hard. Remembering to is.</p>
           </div>
           <a
@@ -284,8 +314,8 @@ export function KITApp() {
         {step === 'upload' && (
           <>
             <div className="mb-12 text-center">
-              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-600 text-3xl shadow-lg shadow-violet-200">
-                📞
+              <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-600 shadow-lg shadow-violet-200">
+                <HugIcon />
               </div>
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
                 Staying in touch<br />is not hard.

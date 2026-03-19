@@ -117,6 +117,10 @@ function makeEvent(params: {
     'ACTION:DISPLAY',
     foldLine(`DESCRIPTION:${escapeICS(params.summary)}`),
     'END:VALARM',
+    'BEGIN:VALARM',
+    `TRIGGER:-PT${params.reminderMinutes}M`,
+    'ACTION:AUDIO',
+    'END:VALARM',
     'END:VEVENT',
   ];
   return lines.join('\r\n') + '\r\n';
